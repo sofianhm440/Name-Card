@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
+  background-color: #0b315b;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 20px;
+}
+
+.profile {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  height: 380px;
+  position: relative;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%,
+      rgba(0, 0, 0, 0.8));
+}
+
+.sosmed {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.sosmed a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sosmed a:hover {
+  color: #3998d0;
+  transform: translateY(-3px);
+}
+
+.sosmed2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.sosmed2 a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sosmed2 a:hover {
+  color: #3998d0;
+  transform: translateY(-3px);
+}
+
+.title {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  z-index: 2;
+}
+
+.title h2 {
+  font-size: 23px;
+}
+
+.title p {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.content {
+  background-color: #3998d0;
+  color: white;
+  padding: 20px 15px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.content h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.content p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.skills span {
+  background-color: #2679ac;
+  padding: 5px 12px;
+  border-radius: 17px;
+  font-size: 11px;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.skills span:hover {
+  background-color: #174f79;
+  transform: translateY(-3px);
+}
+
+.contact {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 18px;
+  padding-top: 12px;
+}
+
+.contact p {
+  font-size: 11px;
+  margin-bottom: 6px;
 }
